@@ -1,10 +1,26 @@
 # Конфиденциальные данные
-/server/.env
-/client/.env
-htube.sql
+./server/.env
+./.env.*
+./*.env
 
 # Зависимости
-node_modules/
+./node_modules/
+./npm-debug.log*
 
-# Загруженные файлы
-uploads/
+# Системные файлы
+.DS_Store
+Thumbs.db
+*.db
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.pid
+
+# Папка с загружаемыми файлами (если не хотите их в репо)
+./uploads/
+./!uploads/.gitkeep  # сохраняет пустую папку
+
+# Настройки IDE
+.idea/
+.vscode/
