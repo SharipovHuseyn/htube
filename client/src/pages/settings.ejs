@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="icon" href="/components/icons/icons8-start-100 1.png" type="image/png">
+</head>
+<body>
+    <div class="messageField">
+        <div id="error-message" class="error-message">
+            <img class="error-image" src="/components/icons/icons8-error-100.png" alt="error">
+            <span id="error-text" class="error-text"></span>
+        </div>
+        <div id="success-message" class="success-message">
+            <img class="success-image" src="/components/icons/icons8-success-100.png" alt="success">
+            <span id="success-text" class="success-text"></span>
+        </div>
+    </div>
+    <div class="connectingBlock">
+        <div class="connecBetweenHeaderMain">
+            <%- include('../part/header.ejs'); %>
+    
+            <main class="mainSettingsContent">
+                <div class="pageTitleBlock">
+                    <img class="pageTitleIcon" src="../components/icons/icons8-settings-100 2.png" alt="">
+                    <h1 class="pageTitle">Settings</h1>
+                </div>
+        
+                <div>
+                    <form action="/" class="">
+                        <div class="settingFlexBlock">
+                            <div class="inputBlockSetting">
+                                <label class="inputTitleSetting" for='useremail'>Email:</label><br>
+                                <input class="inputStyleSetting" type='text' id='useremail' name='useremail' placeholder="Enter email:">
+                            </div>
+        
+                            <div class="inputBlockSetting">
+                                <label class="inputTitleSetting" for='avatarUploud'>Avatar:</label><br>
+                                <label class="upload-btn">
+                                    <input type="file" name="avatarUploud" class="upload-input" accept="image/*">
+                                    <img src="../components/icons/icons8-cloud-upload-100 4.png" alt="Upload Icon">
+                                    Загрузить
+                                </label>                            
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="settingFlexBlock">
+                            <div class="inputBlockSetting">
+                                <div id="imagePreview" class="imagePreview"></div>
+                                <label class="inputTitleSetting" for='userpassword'>Password:</label><br>
+                                <div class="passwordBlock">
+                                    <input class="inputStyleSetting" type='text' id='userpassword' name='userpassword' placeholder="Enter password:" maxlength="20">
+                                    <button class="showPassword" onclick="togglePassword()" type="button">
+                                        <img class="showPasswordImage" src="/components/icons/icons8-eye-100.png" alt="eye">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="inputBlockSetting">
+                                <label class="inputTitleSetting" for='bannerUploud'>Banner:</label><br>
+                                <label class="upload-btn">
+                                    <input id="bannerUploud" type="file" name="bannerUploud" class="upload-input" accept="image/*">
+                                    <img src="../components/icons/icons8-cloud-upload-100 4.png" alt="Upload Icon">
+                                    Загрузить
+                                </label>                            
+                            </div>
+                        </div>
+        
+                        <div class="inputBlockSetting">
+                            <label class="inputTitleSetting" for='username'>Name:</label><br>
+                            <input class="inputStyleSetting" type='text' id='username' name='username' placeholder="Enter name:">
+                        </div>
+                        <div class="inputBlockSetting">
+                            <label class="inputTitleSetting" for='userslug'>Slug (alias):</label><br>
+                            <input class="inputStyleSetting" type='text' id='userslug' name='userslug' placeholder="Enter slug:">
+                        </div>
+                        <div class="inputBlockSetting">
+                            <label class="inputTitleSetting" for='userdiscription'>Discription:</label><br>
+                            <textarea cols="30" rows="30" class="inputStyleSetting textareaStyle" id='userdiscription' name='userdiscription' placeholder="Enter discription:"></textarea>
+                        </div>
+                        <div class="uploadSettings-btnBlock">
+                            <button class="uploadSettings-btn" type="button">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="/script/menu.js"></script>
+    <script src="/script/settings.js"></script>
+</body>
+</html>

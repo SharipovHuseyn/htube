@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload a video</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="icon" href="/components/icons/icons8-start-100 1.png" type="image/png">
+</head>
+<body>
+    <div class="messageField">
+        <div id="error-message" class="error-message">
+            <img class="error-image" src="/components/icons/icons8-error-100.png" alt="error">
+            <span id="error-text" class="error-text"></span>
+        </div>
+        <div id="success-message" class="success-message">
+            <img class="success-image" src="/components/icons/icons8-success-100.png" alt="success">
+            <span id="success-text" class="success-text"></span>
+        </div>
+    </div>
+    <div class="connectingBlock">
+        <div class="connecBetweenHeaderMain">
+            <%- include('../part/header.ejs'); %>
+            <main class="mainUploadVideo">
+                <div class="uploadVideoBlock">
+                    <div class="upload-videoBlock" id="offUploadVideo">
+                        <div>
+                            <h3 class="upload-videoTitle">Upload a video</h3>
+                        </div>
+                        <hr class="hrUploadVideo">
+                        <div class="upload-button-container" id="dropZone">
+                            <input type="file" id="videoUpload" accept="video/*" class="upload-input">
+                            <label for="videoUpload" class="upload-button">
+                                <img class="upload-buttonIcon" src="../components/icons/icons8-upload-100 (1) 1.png" alt="Upload Icon" class="upload-icon">
+                                Drag and drop your file here, or click to select
+                            </label>
+                        </div>
+                    </div>
+        
+                    <div class="upload-videoBlock onUploadVideo none" id="onUploadVideo">
+                        <div>
+                            <h3 class="upload-videoTitle">Upload a video</h3>
+                        </div>
+                        
+                        <hr class="hrUploadVideo">
+        
+                        <div class="loadingUploadVideo" id="loadingUploadVideo">
+                            <div class="progress-container">
+                                <h5 class="loadingUploadTitle">Uploading video (<span class="progressPercent">0%</span>)</h5>
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="upload-form">
+                            <form action="/" class="bcgNB">
+                                <div class="bcgNB FillingFieldsAndDisplayingPictures">
+                                    <div class="bcgNB">
+                                        <div class="inputBlockSetting bcgNB">
+                                            <label class="inputTitleSetting bcgNB" for='videotitle'>Title:</label><br>
+                                            <input class="inputStyleSetting bcgNB" type='text' id='videotitle' name='videotitle' placeholder="Enter title:">
+                                        </div>
+                                        <div class="inputBlockSetting bcgNB">
+                                            <label class="inputTitleSetting bcgNB" for='videodiscription'>Discription:</label><br>
+                                            <textarea cols="30" rows="30" class="inputStyleSetting textareaStyle bcgNB" id='videodiscription' name='videodiscription' placeholder="Enter discription:"></textarea>
+                                        </div>
+                                    </div>
+                                    <div id="imagePreview" class="imagePreview"></div>
+                                </div>
+                                <div class="inputBlockSetting bcgNB">
+                                    <label class="inputTitleSetting bcgNB" for='videobanner'>Thumbnail:</label><br>
+                                    <label class="upload-btn bcgNB">
+                                        <input id="videobanner" type="file" name="videobanner" class="upload-input bcgNB" accept="image/*">
+                                        <img class="bcgNB" src="../components/icons/icons8-cloud-upload-100 4.png" alt="Upload Icon">
+                                        Загрузить
+                                    </label>                            
+                                </div>
+                                <div class="inputBlockSetting bcgNB">
+                                    <label class="inputTitleSetting bcgNB" for="videotags">Tags:</label><br>
+                                    <div class="tag-container inputStyleSetting bcgNB" id="tagContainer">
+                                        <input class="bcgNB inputTage" type="text" id="videotags" placeholder="Enter tags:">
+                                    </div>
+                                </div>
+
+                                <div class="uploadSettings-btnBlock bcgNB">
+                                    <button class="uploadSettings-btn" id="uploadSettings-btn" type="button" disabled onclick="videoDataValidation()">Publish</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <script src="/script/menu.js"></script>
+    <script src="/script/uploadVideo.js"></script>
+</body>
+</html>

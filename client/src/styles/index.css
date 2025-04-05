@@ -1,0 +1,1607 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--color-dark-blue);
+    overflow: hidden;
+    scrollbar-color: var(--color-dark-navy) var(--color-dark-blue);
+}
+
+:root {
+    --color-dark-blue: #191827;
+    --color-gray: #6D6F79; 
+    --color-dark-navy: #2D2E3E;
+    --color-light-gray: #A5A7B3;
+    --color-red: #D43F27;
+    --color-dark-gray: #81818F;
+    --color-burgundy: #B84139;
+    --color-dark-slate: #6A6A75;
+    --color-navy-blue: #242F42;
+    --color-steel-blue: #596072;
+    --color-teal: #3F4A5E;
+    --color-charcoal: #303141;      
+    --color-blackish: #282836;
+    --color-light-silver: #C9C9C9;
+    --color-blue-gray: #555F71;
+    --color-hr-grey: #2D384B;
+    --color-datalist-grey: #686970;
+    --color-published-dark-grey: #41414C;
+    --color-success: #94D82D;
+}
+
+a{
+    text-decoration: none;
+}
+
+.menu{
+    width: 12%;
+    background-color: var(--color-dark-blue);
+    padding: 20px;
+    height: 95vh;
+    border-right: 1px solid var(--color-dark-navy)
+}
+
+.burgerBtn{
+    width: 25px;
+}
+
+.headLogo{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.mainMenu{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.logohtube{
+    width: 30px;
+}
+
+.logoName{
+    color: white;
+    margin-left: 10px;
+}
+
+.menuListItem{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.menuListItemImg{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.menuList{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+hr{
+    border: none;
+    color: var(--color-dark-navy);
+    background-color: var(--color-dark-navy);
+    height: 2px;
+}
+
+.menuListItems{
+    margin-top: 20px;
+}
+
+.subtitle{
+    color: var(--color-gray);
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}
+
+.remoteMenu{
+    width: 35px;
+    transition: width 0.5s ease;
+}
+
+.lll {
+    transform: translateX(-150%);
+    animation: ani 1s forwards;
+  }
+  
+  @keyframes ani {
+    0% {transform: translateX(-150%);}
+    100% {transform: translateY(0);}
+}
+
+.searchInstruments{
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid var(--color-dark-navy);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.connectingBlock{
+    display: flex;
+}
+
+.iconSize20{
+    width: 20px;
+}
+
+.panelUser{
+    display: flex;
+    align-items: center;
+    margin-right: 35px;
+}
+
+li{
+    list-style: none;
+}
+
+.searchEngine{
+    width: 600px;
+    color: white;
+    outline: 0;
+    height: 25px;
+    margin-left: 25px;
+    padding: 10px;
+    font-size: 16px;
+    border: 0;
+}
+
+.regBtnContent{
+    color: white;
+    background-color: var(--color-red);
+    margin-right: 10px;
+}
+
+.regBtn{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-red);
+    justify-content: center;
+    padding: 6px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.regBtnIcon{
+    background-color: var(--color-red);
+    margin-left: 10px;
+}
+
+.headerPanel{
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.iconPanel{
+    margin: 10px;
+}
+
+.connecBetweenHeaderMain{
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.titleCategoryText{
+    color: white;
+    margin-left: 10px;
+}
+
+.titleCategory{
+    display: flex;
+    align-items: center;
+}
+
+.mainContent{
+    padding: 25px;
+    overflow-y: auto;
+    height: 680px;
+}
+
+
+.pictureVideo{
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+}
+
+.video-view-container:hover, .pictureVideo:hover {
+    border-radius: 0px;
+    transition: border-radius 0.3s;
+}
+
+.video-view-container:hover .video-duration, 
+.pictureVideo:hover .video-duration, 
+.video-view-container:hover .progress-wrapper, 
+.pictureVideo:hover .progress-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+
+.videoData{
+    color: var(--color-light-gray);
+    font-size: 12px;
+}
+
+.videoData-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.videoItem{
+    width: 100%;
+}
+
+.videoHeader{
+    color: white;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.goToChannel{
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.iconSize15{
+    width: 15px;
+}
+
+.videoItems{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.confirmed{
+    margin-left: 5px;
+}
+
+.exploreVideo{
+    margin-top: 30px;
+}
+
+.videoItemsEx{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.exPosition{
+    margin-bottom: 30px;
+}
+
+.pageTitle{
+    color: white;
+    margin-left: 20px;
+}
+
+.pageTitleBlock{
+    display: flex;
+    align-items: center;    
+}
+
+.pageTitleIcon{
+    width: 35px;
+}
+
+.mainSettingsContent{
+    padding: 25px;
+    width: 60%;
+}
+
+.inputTitleSetting{
+    color: var(--color-dark-gray);
+}
+
+.inputStyleSetting{
+    width: 470px;
+    height: 15px;
+    border: 1px solid var(--color-dark-gray);
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+    color: white;
+    outline: 0;
+    font-size: 16px;
+}
+
+.inputBlockSetting{
+    display: block;
+    margin-top: 20px;
+}
+
+.textareaStyle{
+    height: 80px;
+}
+
+.settingFlexBlock{
+    display: flex;
+    justify-content: space-between;
+}
+
+.upload-btn {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-dark-blue);
+    color: var(--color-burgundy);
+    border: 1px solid var(--color-burgundy);
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: space-around;
+    height: 15px;
+}
+
+.upload-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.upload-input {
+    display: none;
+}
+
+.uploadSettings-btn{
+    background-color: grey;
+    color: white;
+    padding: 5px 15px;
+    border: 0;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+.uploadSettings-btnBlock{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover{
+    opacity: 90%;
+}
+
+.upload-button-container {
+    border: 2px dashed var(--color-steel-blue); 
+    border-radius: 10px;
+    background-color: var(--color-navy-blue);
+}
+
+.upload-button-container:hover{
+    border: 2px solid var(--color-steel-blue); 
+}
+
+.upload-input {
+    display: none;
+}
+
+.upload-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-navy-blue);
+    color: white;
+    padding: 130px 20px;
+    cursor: pointer;
+}
+
+.upload-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.upload-buttonIcon{
+    background-color: var(--color-navy-blue);
+    width: 40px;
+}
+
+.mainUploadVideo {
+    display: flex;
+    justify-content: center;
+    padding: 100px 25px;
+    height: 100vh; /* Задаем фиксированную высоту */
+    overflow-y: auto; /* Включаем вертикальную прокрутку */
+    width: 100%;
+}
+
+.uploadVideoBlock{
+    height: 900px;
+}
+
+.onUploadVideo{
+    height: fit-content;
+}
+
+.upload-videoBlock{
+    width: 820px;
+    padding: 20px;
+    background-color: var(--color-navy-blue);
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.upload-videoTitle{
+    background-color: var(--color-navy-blue);
+    color: white;
+}
+
+.hrUploadVideo{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: var(--color-hr-grey);
+}
+
+.mainContentEditor{
+    padding: 25px;
+    height: 680px;
+    overflow-y: auto;
+    scroll-behavior:smooth;
+}
+
+.ContentEditorBlock{
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.iconsContentEditor{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    margin-left: 115px;
+}
+
+.iconContentEditor{
+    margin: 6px;
+}
+
+.headImgContentEditor{
+    width: 220px;
+}
+
+.imgContentEditor{
+    width: 100%;
+    height: 125px;
+    border-radius: 2px;
+}
+
+.listsDataContentEditor{
+    display: flex;
+}
+
+.listDataContentEditor{
+    color: var(--color-datalist-grey);
+    margin-left: 25px;
+    font-size: 12px;
+}
+
+.headContentEditor{
+    color: white;
+}
+
+.subtitleContentEditor{
+    color: var(--color-datalist-grey);
+    width: 410px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.headsContentEditor{
+    margin-left: 25px;
+}
+
+.publishedDataContentEditor{
+    margin-top: 8px;
+    color: var(--color-published-dark-grey);
+}
+
+.mainHistory{
+    height: 680px;
+    overflow-y: auto;
+    padding: 25px;
+}
+
+.historyTitleAndBtn{
+    display: flex;
+    align-items: center;
+}
+
+.clearHistoryButton{
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    background-color: var(--color-charcoal);
+    padding: 6px 15px;
+    font-weight: 500;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+
+.headImgHistoryContent{
+    width: 180px;
+    height: 100px;
+    border-radius: 4px;
+}
+
+.historyContent{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    width: 60%;
+}
+
+.titleHistoryContent{
+    color: white;
+}
+
+.dataHistoryContents{
+    display: block;
+    align-items: flex-end;
+    margin-left: 25px;
+}
+
+.dataHistoryContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: 150px;
+}
+
+.listDataHistoryContent{
+    font-size: 10px;
+    color: var(--color-light-gray);
+}
+
+.iconDataHistoryContent{
+    width: 7px;
+    text-align: center;
+}
+
+.channelHistoryContent{
+    margin-top: 10px;
+}
+
+.mainPlaylist{
+    padding: 25px;
+}
+
+.playlistTitleAndBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addPlaylistButton{
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    background-color: var(--color-charcoal);
+    padding: 6px 15px;
+    font-weight: 500;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+
+.playlistContents{
+    display: flex;
+}
+
+.avatarPlaylistContent{
+    width: 256px;
+    height: 145px;
+}
+
+.componentPlaylistContent{
+    width: 245px;
+    margin-bottom: -4px;
+}
+
+.playlist{
+    margin-top: 25px;
+    margin-right: 25px;
+    width: 256px;
+}
+
+.playlist:hover{
+    opacity: 90%;
+}
+
+.subtitlePlaylist{
+    color: white;
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+.playlistContentBlock{
+    display: block;
+    width: 256px;
+    text-align: center;
+}
+
+.dataWatchVideo{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nameWatchVideo{
+    color: white;
+}
+
+.watchedWatchVideo{
+    margin-top: 10px;
+    color: var(--color-light-gray);
+    font-size: 10px;
+}
+
+.blockAboutTheChannel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.сhannelAvatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.сhannelData{
+    display: flex;
+    align-items: center;
+}
+
+.сhannelName{
+    color: white;
+    margin-right: 6px;
+}
+
+.numberOfViews{
+    color: var(--color-light-gray);
+    font-size: 10px;
+}
+
+.DataAboutTheChannel{
+    display: grid;
+    align-items: baseline;
+    margin-left: 15px;
+}
+
+.DataChannel{
+    display: flex;
+    justify-content: center;
+}
+
+.subscribedBtnOn{
+    color: white;
+    background-color: var(--color-dark-gray);
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+
+.subscribeBtnOff{
+    color: white;
+    background-color: var(--color-red);
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.aboutAVideo{
+    background-color: var(--color-navy-blue);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.textAboutAVideo{
+    background-color: var(--color-navy-blue);
+    color: white;
+    font-size: 12px;
+}
+
+.moreBtn{
+    font-size: 12px;
+    color: var(--color-light-gray);
+    border: 0;
+    background-color: var(--color-navy-blue);
+}
+
+.inputComment{
+    width: 700px;
+    height: 14px;
+    border: 1px solid var(--color-hr-grey);
+    border-radius: 5px;
+    outline: 0;
+    color: white;
+    font-size: 15px;
+    padding: 10px 15px;
+}
+
+.addCommentBtn{
+    background-color: var(--color-blackish);
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    padding: 10px 15px;
+}
+
+.addCommentBtn:hover{
+    background-color: var(--color-blue-gray)
+}
+
+.addCommentBlock{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.commentHead{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.timeTheCommentPublished{
+    color: var(--color-light-gray);
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.aboutTheAuthorComment{
+    display: flex;
+    align-items: self-start;
+}
+
+.commentsBlock{
+    margin-top: 40px;
+}
+
+.commentBlock{
+    margin-bottom: 30px;
+}
+
+.deleteCommentBtn, .saveCommentBtn, .answerCommentBtn{
+    color: var(--color-light-gray);
+    font-size: 12px;
+    border: 0; 
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+.deleteCommentBtn:hover, .saveCommentBtn:hover, .answerCommentBtn:hover{
+    background-color: var(--color-hr-grey);
+}
+
+.textComment{
+    color: var(--color-light-silver);
+    font-size: 14px;
+}
+
+.textCommentBlock{
+    margin: 15px;
+}
+
+.editorCommentBtn{
+    margin-left: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.countinerMr{
+    margin: 0 25px 25px 25px;
+}
+
+.viewingBasisContiner{
+    height: fit-content;
+    width: 75%;
+}
+
+.videoRecommendationsBlock{
+    height: fit-content;
+    width: 25%;
+    display: grid;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.mainWatchVideo {
+    display: flex;
+    justify-content: center;
+    height: 700px; /* Задаем фиксированную высоту для активации прокрутки */
+    overflow-y: auto; /* Включаем вертикальную прокрутку */
+    padding: 0 25px 0 0;
+    background-color: var(--color-dark-blue);
+}
+
+.mainWatchVideo > * {
+    flex-shrink: 0;
+}
+
+.videoRecommendation{
+    width: 85%;
+    margin-bottom: 25px;
+    margin-left: 40px;
+}
+
+.videoRecommendationImage{
+    width: 100%;
+}
+
+.videoRecommendationData{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.videoRecommendationView, .videoRecommendationWhen{
+    font-size: 12px;
+    color: var(--color-light-gray);
+    margin-top: 5px;
+}
+
+.videoRecommendationTitles{
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.videoRecommendationChennal{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.videoRecommendationChennalName{
+    font-size: 14px;
+    color: var(--color-light-gray);
+    margin-right: 5px;
+}
+
+.mainUserCannel{
+    padding: 25px;
+    height: 680px;
+    overflow-y: auto;
+}
+
+.headerChannel{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.channelAvatar{
+    width: 120px;
+}
+
+.channelData{
+    display: flex;
+    margin-top: 25px;
+}
+
+.channelName{
+    color: white;
+}
+
+.channelInfoItems{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.fullStop{
+    width: 10px;
+}
+
+.channelInfoItem{
+    color: var(--color-light-gray);
+    font-size: 12px;
+}
+
+.aboutChannel{
+    width: 320px;
+    color: var(--color-light-gray);
+    font-size: 10px;
+}
+
+.subscribeBtnOn{
+    border: 0;
+    border-radius: 3px;
+    color: white;
+    background-color: var(--color-blue-gray);
+    padding: 2px 20px;
+    font-weight: 500;
+    width: fit-content;
+}
+
+.channelInfo{
+    display: grid;
+    align-items: initial;
+    height: 130px;
+    margin-left: 15px;
+}
+
+.groupTitile{
+    color: white;
+    margin-left: 10px;
+}
+
+.groupBlock{
+    display: flex;
+    align-items: center;
+}
+
+.groupChannelVideos{
+    margin-top: 50px;
+}
+
+.groupVideoBlock{
+    width: 100%;
+    
+}
+
+.groupVideoImage{
+    width: 100%;
+}
+
+.groupVideosBlock{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.groupVideoInfoItems{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.groupVideoInfoItem{
+    color: var(--color-light-gray);
+    font-size: 10px;
+}
+
+.groupVideoTitle{
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.bcgNB{
+    background-color: var(--color-navy-blue);
+}
+
+.imagePreview img{
+    width: 220px;
+    height: 125px;
+    border-radius: 5px 5px 0 0;
+}
+
+.imagePreview{
+    width: 220px;
+    background-color: var(--color-teal);
+    border-radius: 5px;
+    height: fit-content;
+    margin-top: 20px;
+}
+
+.FillingFieldsAndDisplayingPictures{
+    display: flex;
+    justify-content: space-between;
+}
+
+.imageTitles{
+    color: white;
+    margin: 10px;
+    background-color: var(--color-teal);
+    font-size: 12px;
+}
+
+.pagesLink{
+    text-decoration: none;
+}
+
+.mainAuthentication{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.authenticationBlock{
+    width: 21%;
+    border-radius: 10px;
+    box-shadow: rgba(138, 138, 138, 0.35) 0px 5px 15px;
+    padding: 25px;
+}
+
+.authBtn{
+    padding: 8px 50px;
+    color: white;
+    background-color: var(--color-red);
+    border: 0;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.wd-270{
+    width: 270px;
+}
+
+.g-recaptcha{
+    margin-top: 20px;
+    height: 74px;
+}
+
+.lrBtnBlock {
+    display: flex;
+    justify-content: center;
+}
+
+.centerBlock{
+    display: flex;
+    justify-content: center;
+}
+
+.authenticationSelection{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.selectionItem{
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--color-dark-slate);
+    cursor: pointer;
+}
+
+.passwordBlock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.showPassword{
+    width: 40px;
+    height: 47px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 1px solid var(--color-dark-gray);
+    border-radius: 5px;
+    outline: 0;
+}
+
+.showPasswordImage{
+    width: 20px;
+}
+
+.active{
+    color: var(--color-burgundy);
+    text-decoration: underline;
+}
+
+.step {
+    display: none;
+}
+.step.activepage {
+    display: block;
+}
+
+.file-input-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px dashed var(--color-dark-gray);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.file-input-label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+
+.file-preview {
+    width: 100px; /* Ширина */
+    height: 100px; /* Высота */
+    object-fit: cover; /* Масштабируем и обрезаем */
+    border-radius: 10px; /* Закругленные углы */
+    display: none; /* Скрыто до загрузки изображения */
+}
+
+.file-input {
+    display: none; /* Прячем стандартный input */
+}
+
+#placeholderText {
+    font-size: 14px;
+    width: 75px;
+    pointer-events: none;
+}
+
+.imageInputBlock {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.backBtn{
+    padding: 8px 40px;
+    color: white;
+    background-color: var(--color-blue-gray);
+    border: 0;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+.code-inputs {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.code-inputs input {
+    width: 30px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid var(--color-dark-gray);
+    margin: 0 5px;
+    color: white;
+    border-radius: 5px;
+}
+  
+.code-inputs input:focus {
+    outline: none;
+    border-color: var(--color-red);
+}
+  
+.confirmTitle{
+    color: white;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.messageField{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.error-message {
+    position: absolute;
+    color: var(--color-red);
+    font-size: 14px;
+    margin-bottom: 10px;
+    background-color: var(--color-navy-blue);
+    border-radius: 5px;
+    width: fit-content;
+    padding: 10px 20px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.error-message.show {
+    opacity: 1;
+    transform: translateY(0); 
+    background-color: var(--color-navy-blue);
+}
+
+.error-image {
+    width: 30px;
+    margin-right: 10px;
+    background-color: var(--color-navy-blue);
+}
+
+.error-text {
+    background-color: var(--color-navy-blue);   
+}
+
+.codeTime{
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.success-message {
+    position: absolute;
+    color: var(--color-success);
+    font-size: 14px;
+    margin-bottom: 10px;
+    background-color: var(--color-navy-blue);
+    border-radius: 5px;
+    width: fit-content;
+    padding: 10px 20px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.success-message.show {
+    opacity: 1;
+    transform: translateY(0);
+    background-color: var(--color-navy-blue);
+}
+
+.success-image {
+    width: 30px;
+    margin-right: 10px;
+    background-color: var(--color-navy-blue);
+}
+
+.success-text {
+    background-color: var(--color-navy-blue);   
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border: 1px solid var(--color-dark-gray);
+    border-radius: 4px;
+    height: auto;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: var(--color-dark-gray);
+}
+
+.tag .remove-tag {
+    margin-left: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--color-dark-gray);
+}
+
+.inputTage{
+    border: 0;
+    /* outline: 0; */
+    width: 100%;
+    color: white;
+}
+
+.inputTage:focus {
+    outline: none;
+}
+
+.upload-button:hover, .upload-button-container:hover{
+    background-color: var(--color-teal);
+}
+
+.upload-buttonIcon{
+    background-color: rgba(255, 255, 255, 0)
+}
+
+/* ////// */
+
+.loadingUploadVideo {
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progress-container {
+    position: relative;
+    height: 25px;
+    width: 100%;
+    background-color: var(--color-steel-blue);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: var(--color-teal);
+    transition: width 0.5s ease; /* Плавная анимация заполнения */
+    z-index: 1; /* Бар будет под текстом */
+}
+
+.loadingUploadTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0)
+}
+
+.progressPercent{
+    background-color: rgba(255, 255, 255, 0)
+}
+
+.avatarImage{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.showDataEmpty{
+    color: var(--color-dark-gray);
+    text-align: center;
+    margin-top: 25px;
+}
+
+.functionStudioBtn{
+    border: 0;
+}
+
+.video-view-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--color-light-silver);
+    overflow: hidden;
+}
+
+.progress-video-view {
+    background-color: var(--color-burgundy);
+    height: 100%;
+    width: 50%;
+}
+
+.none{
+    display: none;
+}
+
+.history-view-container {
+    position: relative;
+    width: 100%;
+    height: 98%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2px 4px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 4px;
+    backdrop-filter: blur(2px);
+}
+
+.deleteViewVideoBlock{
+    margin-left: auto;
+}
+
+.deleteViewVideo{
+    border: 0;
+    color: white;
+}
+
+.deleteImage{
+    width: 20px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.deleteImage:hover{
+    background-color: #242F42;
+}
+
+.likeImage, .dislikeImage{
+    width: 25px;
+    background-color: #ffffff00;
+}
+
+.likeAndDislikeBlock{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-charcoal);
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.lineHorz{
+    width: 1px;
+    height: 20px;
+    background-color: white;
+}
+
+.dislikeBtn, .likeBtn{
+    border: 0;
+    padding: 5% 10px;
+    background-color: var(--color-charcoal);
+    display: flex;
+    align-items: center;
+}
+
+.dislikeBtn:hover, .likeBtn:hover{
+    background-color: var(--color-dark-slate);
+}
+
+.countLike{
+    background-color: #ffffff00;
+    color: white;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.like-comment{
+    width: 18px;
+}
+
+.like-commentBtn{
+    border: 0;
+    margin: 5px;
+}
+
+.commnetEditInput{
+    outline: 0;
+    color: var(--color-light-silver);
+    font-size: 14px;
+    border: 1px solid var(--color-light-silver);
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.inputSubcomment{
+    width: 600px;
+}
+
+.addSubcommentBlock{
+    margin-left: 60px;
+    width: auto;
+    margin-top: 10px;
+}
+
+.answersBlock{
+    margin-left: 50px;
+}
+
+.answersBtn{
+    color: #3ea6ff;
+    border: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+    border-radius: 20px;
+}
+
+.answersBtn:hover{
+    color: #3ea6ff;
+    background-color: #3ea5ff5c;
+}
+
+.answersCount{
+    margin-left: 4px;
+    background-color: #ffffff00;
+}
+
+.subcommnetImage{
+    width: 15px;
+    margin-right: 5px;
+    background-color: #ffffff00;
+}
+
+.subcommentsContainer {
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.hidden {
+    max-height: 0;
+}
+
+.likeCount{
+    color: var(--color-light-gray);
+    font-size: 12px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.saveButton{
+    background-color: var(--color-red);
+    padding: 5px;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.commentEditInput{
+    color: white;
+    padding: 5px 10px;
+    outline: 0;
+    border: 1.5px solid var(--color-blue-gray);
+    border-radius: 3px;
+}

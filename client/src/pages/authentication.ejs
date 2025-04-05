@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="icon" href="/components/icons/icons8-start-100 1.png" type="image/png">
+</head>
+<body>
+    <main class="mainAuthentication">
+        <section class="authenticationBlock">
+            <div class="centerBlock">
+                <a href="/" class="pagesLink">
+                    <div class="headLogo">
+                        <img class="logohtube" src="../components/icons/icons8-start-100 1.png" alt="logo">
+                        <h1 class="logoName">htube</h1>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <ul class="authenticationSelection">
+                    <li class="selectionItem" onclick="loginPage()">Login</li>
+                    <li class="selectionItem" onclick="registrationPage()">Register</li>
+                </ul>
+            </div>
+
+            <div class="login">
+                <div class="inputBlockSetting">
+                    <label class="inputTitleSetting" for='useremailLogin'>Email:</label><br>
+                    <input class="inputStyleSetting wd-270" type='email' id='useremailLogin' name='useremailLogin' placeholder="Enter email:">
+                </div>
+                <div class="inputBlockSetting">
+                    <label class="inputTitleSetting" for='userpasswordLogin'>Password:</label><br>
+                    <div class="passwordBlock">
+                        <input class="inputStyleSetting wd-270" type='password' id='userpasswordLogin' name='userpasswordLogin' placeholder="Enter password:">
+                        <button class="showPassword" onclick="togglePassword(0)" type="button">
+                            <img class="showPasswordImage" src="/components/icons/icons8-eye-100.png" alt="eye">
+                        </button>
+                    </div>
+                </div>   
+                <div id="loginRecaptcha" class="g-recaptcha" ></div>
+                <div class="lrBtnBlock">
+                    <button id="loginBtn" class="authBtn" type="submit" onclick="if(validateLoginData() == true) handleSubmit('login')">Login</button>
+                </div>
+            </div>
+
+            <div class="register none">
+                <div id="step1" class="step activepage">
+                    <div class="inputBlockSetting">
+                        <label class="inputTitleSetting" for='username'>Name:</label><br>
+                        <input class="inputStyleSetting wd-270" type='text' id='username' name='username' placeholder="Enter name:">
+                    </div>
+                    <div class="inputBlockSetting">
+                        <label class="inputTitleSetting" for='usersurname'>Surname:</label><br>
+                        <input class="inputStyleSetting wd-270" type='text' id='usersurname' name='usersurname' placeholder="Enter surname:">
+                    </div>
+                    <div class="lrBtnBlock">
+                        <button class="authBtn" type="button" onclick="if (validateStep1()) goToStep(2)">Next</button>
+                    </div>
+                </div>
+
+                <div id="step2" class="step">
+                    <div class="inputBlockSetting">
+                        <label class="inputTitleSetting" for='useremail'>Email:</label><br>
+                        <input class="inputStyleSetting wd-270" type='email' id='useremail' name='useremail' placeholder="Enter email:">
+                    </div>
+                    <div class="inputBlockSetting">
+                        <label class="inputTitleSetting" for='userNewpassword'>Password:</label><br>
+                        <div class="passwordBlock">
+                            <input class="inputStyleSetting wd-270" type='password' id='userNewpassword' name='userNewpassword' placeholder="Enter password:" maxlength="20">
+                            <button class="showPassword" onclick="togglePassword(1)" type="button">
+                                <img class="showPasswordImage" src="/components/icons/icons8-eye-100.png" alt="eye">
+                            </button>
+                        </div>
+                    </div>  
+                    <div class="inputBlockSetting">
+                        <label class="inputTitleSetting" for='userRepeatedpassword'>Repeated password:</label><br>
+                        <div class="passwordBlock">
+                            <input class="inputStyleSetting wd-270" type='password' id='userRepeatedpassword' name='userRepeatedpassword' placeholder="Enter password:" maxlength="20">
+                            <button class="showPassword" onclick="togglePassword(2)" type="button">
+                                <img class="showPasswordImage" src="/components/icons/icons8-eye-100.png" alt="eye">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="lrBtnBlock">
+                        <button id="backBtn" class="backBtn" type="submit" onclick="goToStep(1)" id="submit-button">Back</button>
+                        <button class="authBtn" type="button" onclick="validateStep2(); startCountdown()">Next</button>
+                    </div>
+                </div>
+
+                <div id="step3" class="step">
+                    <h3 class="confirmTitle">Enter code to confirm</h3>
+                    <div class="code-inputs">
+                        <input type="text" id="code1" maxlength="1" onkeydown="handleKeydown(event, this, 'code2')" />
+                        <input type="text" id="code2" maxlength="1" onkeydown="handleKeydown(event, this, 'code3')" />
+                        <input type="text" id="code3" maxlength="1" onkeydown="handleKeydown(event, this, 'code4')" />
+                        <input type="text" id="code4" maxlength="1" onkeydown="handleKeydown(event, this, 'code5')" />
+                        <input type="text" id="code5" maxlength="1" onkeydown="handleKeydown(event, this, 'code6')" />
+                        <input type="text" id="code6" maxlength="1" onkeydown="handleKeydown(event, this, '')" />
+                      </div>
+                      <p class="codeTime" id="codeTime">05:00</p>
+                    <div class="lrBtnBlock">
+                      <button onclick="validateCode()" class="authBtn">Submit Code</button>                                        
+                    </div>
+                </div>
+
+                <div id="step4" class="step">
+                    <div class="imageInputBlock">
+                        <div class="file-input-container">
+                            <label for="fileInput" class="file-input-label">
+                                <img id="previewImage" src="" alt="Upload Image" class="file-preview">
+                                <img  id="placeholderText" src="/components/icons/icons8-image-100.png" alt="">
+                            </label>
+                            <input type="file" id="fileInput" class="file-input" accept="image/*" onchange="previewFile()">
+                        </div>
+                    </div>
+                    <div class="inputBlockSetting">
+                        <label class="inputTitleSetting" for='userslug'>Slug(alias):</label><br>
+                        <input class="inputStyleSetting wd-270" type='text' id='userslug' name='userslug' placeholder="Enter slug:">
+                    </div>
+                    <div class="lrBtnBlock">
+                        <button class="authBtn" type="button" onclick="validateUserData()" id="submit-button">Next</button>
+                    </div>
+                </div>
+
+                <div id="step5" class="step">
+                    <div id="registerRecaptcha" class="g-recaptcha" ></div>
+                    <div class="lrBtnBlock">
+                        <button class="authBtn" type="button" id="finishBtn" onclick="handleSubmit('register').then(success => { if (success) sendUserData() })">Finish</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://www.google.com/recaptcha/api.js?onload=onLoadRecaptcha&render=explicit" async defer></script>
+    <script src="/script/utils.js"></script>
+    <script src="/script/authentication.js"></script>
+</script>
+</body>
+</html>

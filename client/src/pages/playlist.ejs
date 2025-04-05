@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="icon" href="/components/icons/icons8-start-100 1.png" type="image/png">
+</head>
+<body>
+    <div class="connectingBlock">
+        <div class="connecBetweenHeaderMain">
+            <%- include('../part/header.ejs'); %>
+    
+            <main class="mainPlaylist">
+                <div class="playlistTitleAndBtn">
+                    <div class="pageTitleBlock">
+                        <img class="pageTitleIcon" src="../components/icons/icons8-playlist-100 (1) 1.png" alt="history">
+                        <h1 class="pageTitle">Playlist</h1>
+                    </div>
+                    <div>
+                        <button class="addPlaylistButton">Create a playlist</button>
+                    </div>
+                </div>
+        
+                <div class="playlistContents">
+                    <div class="playlist" id="1">
+                        <div class="playlistContentBlock">
+                            <div>
+                                <img class="componentPlaylistContent" src="../components/icons/Component 1.png" alt="maxresdefault">
+                            </div>
+                            <div>
+                                <img class="avatarPlaylistContent" src="../components/videoImage/maxresdefault (2).png" alt="maxresdefault">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="subtitlePlaylist">Programmer JS</p>
+                        </div>
+                    </div>
+                    <div class="playlist" id="2">
+                        <div class="playlistContentBlock">
+                            <div>
+                                <img class="componentPlaylistContent" src="../components/icons/Component 1.png" alt="maxresdefault">
+                            </div>
+                            <div>
+                                <img class="avatarPlaylistContent" src="../components/videoImage/maxresdefault (7).png" alt="maxresdefault">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="subtitlePlaylist">Winter sports</p>
+                        </div>
+                    </div>
+                    <div class="playlist" id="3">
+                        <div class="playlistContentBlock">
+                            <div>
+                                <img class="componentPlaylistContent" src="../components/icons/Component 1.png" alt="maxresdefault">
+                            </div>
+                            <div>
+                                <img class="avatarPlaylistContent" src="../components/videoImage/maxresdefault (11).png" alt="maxresdefault">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="subtitlePlaylist">Best Football Game</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="/script/menu.js"></script>
+</body>
+</html>

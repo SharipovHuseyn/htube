@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="icon" href="/components/icons/icons8-start-100 1.png" type="image/png">
+</head>
+<body>
+    <div class="connectingBlock">
+        <div class="connecBetweenHeaderMain">
+            <%- include('../part/header.ejs'); %>
+    
+            <main class="mainHistory">
+                <div class="historyTitleAndBtn">
+                    <div class="pageTitleBlock">
+                        <img class="pageTitleIcon" src="../components/icons/icons8-история-100 1.png" alt="history">
+                        <h1 class="pageTitle">History</h1>
+                    </div>
+                    <div>
+                        <button class="clearHistoryButton" onclick="deleteHistory('all')">Clear history</button>
+                    </div>
+                </div>
+                <div class="historyContents">
+                    <p class="showDataEmpty"></p>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <script src="/script/utils.js"></script>
+    <script src="/script/menu.js"></script>
+    <script src="/script/history.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Video</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/video.css">
+    <link rel="icon" href="/components/icons/icons8-start-100 1.png" type="image/png">
+</head>
+<body>
+    <div class="connectingBlock">
+        <div class="connecBetweenHeaderMain">
+            <%- include('../part/header.ejs'); %>
+    
+            <main class="mainWatchVideo">
+                <div class="viewingBasisContiner">
+                    <div class="video-container">
+                        <div class="video-player">
+                            <video id="video" preload="metadata"></video>
+                            <div class="overlay-icon" id="overlayIcon">⏸</div>
+                            <div class="controls">
+                                <div class="control-row">
+                                    <button id="playPause" class="button"><img class="iconSize20 iconBackgorundNone" src="../components/icons/icons8-play-100 1.png" alt="play"></button>
+                                    <div class="progress-bar" id="progressBar">
+                                        <div class="watched" id="watchedBar"></div>
+                                        <div class="progress" id="progress"></div>
+                                    </div>
+                                    <div class="time" id="time">0:00 / 0:00</div>
+                                    <div class="volume">
+                                        <label class="button" for="volume"><img class="iconSize20 iconBackgorundNone" src="../components/icons/icons8-audio-100 1.png" alt=""></label>
+                                        <input id="volume" type="range" min="0" max="1" step="0.1" value="1">
+                                    </div>
+                                    <select name="imageQuality" id="imageQuality" class="imageQuality">
+                                        <option value="master">Авто</option>
+                                        <option value="1080p">1080p</option>
+                                        <option value="720p">720p</option>
+                                        <option value="480p">480p</option>
+                                    </select>
+                                    <button id="lampVideo" class="button"><img class="iconSize20 lampVideo" src="../components/icons/icons8-идея-100 1.png" alt="lamp"></button>
+                                    <button id="fullscreen" class="button"><img class="iconSize20 iconBackgorundNone" src="../components/icons/icons8-рамка-100 1.png" alt="full"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="countinerMr">
+                        <div class="dataWatchVideo">
+                            <div>
+                                <h4 class="nameWatchVideo"></h4>
+                                <p class="watchedWatchVideo">2 712 034 views</p>
+                            </div>
+                            <div class="likeAndDislikeBlock">
+                                <button class="likeBtn" onclick="toggleLike()">
+                                    <img id="likeImage" class="likeImage" src="../components/icons/icons8-like.png" alt="like">
+                                    <p id="countLike" class="countLike"></p>
+                                </button>
+                                <div class="lineHorz"></div>
+                                <button class="dislikeBtn" onclick="toggleDislike()">
+                                    <img id="dislikeImage" class="dislikeImage" src="../components/icons/icons8-dislike.png" alt="dislike">
+                                </button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="blockAboutTheChannel">
+                            <div class="DataChannel">
+                                <div>
+                                    <img class="сhannelAvatar" src="../components/icons/icons8-name-100 2.png" alt="avatar">
+                                </div>
+                                <div class="DataAboutTheChannel">
+                                    <div class="сhannelData">
+                                        <h4 class="сhannelName"></h4>
+                                    </div>
+                                    <p class="numberOfViews" id="countSubscribe"></p>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="subscribeBtnOff" id="subscribeBtn" onclick="updateSubscribeButton()">Subscribe</button>
+                            </div>
+                        </div>
+        
+                        <div class="aboutAVideo">
+                            <p class="textAboutAVideo"></p>
+                            <button class="moreBtn none">MORE</button>
+                        </div>
+                        <hr>
+                        <div class="addCommentBlock">
+                            <div>
+                                <input class="inputComment" id="inputComment" type="text" placeholder="Enter comment:">
+                            </div>
+                            <div>
+                                <button class="addCommentBtn" onclick="addComment()">Comment</button>
+                            </div>
+                        </div>
+                        <div class="commentsBlock"></div>
+                    </div>
+                </div>
+
+                <div class="videoRecommendationsBlock">
+                    <div class="videoRecommendation" id="1">
+                        <div>
+                            <img class="videoRecommendationImage" src="../components/videoImage/maxresdefault (12).png" alt="">
+                        </div>
+                        <div class="videoRecommendationData">
+                            <p class="videoRecommendationView">2.7 M views</p>
+                            <p class="videoRecommendationWhen">a month ago</p>
+                        </div>
+                        <div>
+                            <h4 class="videoRecommendationTitles">Phil Foden 2024 - Skills , Goals & Assists - HD</h4>
+                        </div>
+                        <div class="videoRecommendationChennal">
+                            <p class="videoRecommendationChennalName">Football </p>
+                            <img class="iconSize15" src="../components/icons/icons8-проверено-100 8.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="videoRecommendation" id="2">
+                        <div>
+                            <img class="videoRecommendationImage" src="../components/videoImage/sddefault (1).png" alt="">
+                        </div>
+                        <div class="videoRecommendationData">
+                            <p class="videoRecommendationView">2.7 M views</p>
+                            <p class="videoRecommendationWhen">a month ago</p>
+                        </div>
+                        <div>
+                            <h4 class="videoRecommendationTitles">Phil Foden 2024 - Skills , Goals & Assists - HD</h4>
+                        </div>
+                        <div class="videoRecommendationChennal">
+                            <p class="videoRecommendationChennalName">Football </p>
+                            <img class="iconSize15" src="../components/icons/icons8-проверено-100 8.png" alt="">
+                        </div>
+                    </div>
+                    <div class="videoRecommendation" id="3">
+                        <div>
+                            <img class="videoRecommendationImage" src="../components/videoImage/sddefault (3).png" alt="">
+                        </div>
+                        <div class="videoRecommendationData">
+                            <p class="videoRecommendationView">2.7 M views</p>
+                            <p class="videoRecommendationWhen">a month ago</p>
+                        </div>
+                        <div>
+                            <h4 class="videoRecommendationTitles">Phil Foden 2024 - Skills , Goals & Assists - HD</h4>
+                        </div>
+                        <div class="videoRecommendationChennal">
+                            <p class="videoRecommendationChennalName">Football </p>
+                            <img class="iconSize15" src="../components/icons/icons8-проверено-100 8.png" alt="">
+                        </div>
+                    </div>
+                    <div class="videoRecommendation" id="4">
+                        <div>
+                            <img class="videoRecommendationImage" src="../components/videoImage/maxresdefault (11).png" alt="">
+                        </div>
+                        <div class="videoRecommendationData">
+                            <p class="videoRecommendationView">2.7 M views</p>
+                            <p class="videoRecommendationWhen">a month ago</p>
+                        </div>
+                        <div>
+                            <h4 class="videoRecommendationTitles">Phil Foden 2024 - Skills , Goals & Assists - HD</h4>
+                        </div>
+                        <div class="videoRecommendationChennal">
+                            <p class="videoRecommendationChennalName">Football </p>
+                            <img class="iconSize15" src="../components/icons/icons8-проверено-100 8.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="/script/utils.js"></script>
+    <script src="/script/menu.js"></script>
+    <script src="/script/subscriptions.js"></script>
+    <script src="/script/comments.js"></script>
+    <script src="/script/commentLikes.js"></script>
+    <script src="/script/likes.js"></script>
+    <script src="/script/watchVideo.js"></script>
+    <script src="/script/videoController.js"></script>
+    <script src="/script/backgroundVideoController.js"></script>
+</body>
+</html>      

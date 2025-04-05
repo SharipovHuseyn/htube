@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htube</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="icon" href="/components/icons/icons8-start-100 1.png" type="image/png">
+</head>
+<body>
+    <div class="connectingBlock">
+        
+        
+        <div class="connecBetweenHeaderMain">
+            <%- include('../part/header.ejs'); %>
+    
+            <main class="mainContent">
+    
+                <div class="trendingVideo">
+                    <div class="titleCategory">
+                        <img class="iconSize20" src="../components/icons/icons8-огонь-1001.png" alt="redFire">
+                        <h4 class="titleCategoryText">Trending</h4>
+                    </div>
+        
+                    <div class="videoItems videoItemsEx">
+                        <a href="/watchVideo" class="pagesLink">
+                            <div class="videoItem" id="1" >
+                                <div>
+                                    <img class="pictureVideo" src="../components/videoImage/maxresdefault (6).png" alt="video">
+                                </div>
+                                <div>
+                                    <div class="videoData-block">
+                                        <div class="videoData-block">
+                                            <img class="iconSize15" src="../components/icons/icons8-огонь-1001.png" alt="redFire">
+                                            <p class="videoData">2.7 M views</p>
+                                        </div>
+                                        <p class="videoData">a month ago</p>
+                                    </div>
+                                    <p class="videoHeader">Phil Foden 2024 - Skills , Goals & Assists - HD</p>
+                                    <div class="goToChannel">
+                                        <h5 class="videoData">Football</h5>
+                                        <img class="iconSize15 confirmed" src="../components/icons/icons8-провереноj-100 8.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="/watchVideo" class="pagesLink">
+                            <div class="videoItem" id="2">
+                                <div>
+                                    <img class="pictureVideo" src="../components/videoImage/maxresdefault (4).png" alt="video">
+                                </div>
+                                <div>
+                                    <div class="videoData-block">
+                                        <div class="videoData-block">
+                                            <img class="iconSize15" src="../components/icons/icons8-огонь-1001.png" alt="redFire">
+                                            <p class="videoData">2.7 M views</p>
+                                        </div>
+                                        <p class="videoData">a month ago</p>
+                                    </div>
+                                    <p class="videoHeader">Phil Foden 2024 - Skills , Goals & Assists - HD</p>
+                                    <div class="goToChannel">
+                                        <h5 class="videoData">Football</h5>
+                                        <img class="iconSize15 confirmed" src="../components/icons/icons8-провереноj-100 8.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="/watchVideo" class="pagesLink">
+                            <div class="videoItem" id="3">
+                                <div>
+                                    <img class="pictureVideo" src="../components/videoImage/maxresdefault (2).png" alt="video">
+                                </div>
+                                <div>
+                                    <div class="videoData-block">
+                                        <div class="videoData-block">
+                                            <img class="iconSize15" src="../components/icons/icons8-огонь-1001.png" alt="redFire">
+                                            <p class="videoData">2.7 M views</p>
+                                        </div>
+                                        <p class="videoData">a month ago</p>
+                                    </div>
+                                    <p class="videoHeader">Phil Foden 2024 - Skills , Goals & Assists - HD</p>
+                                    <div class="goToChannel">
+                                        <h5 class="videoData">Football</h5>
+                                        <img class="iconSize15 confirmed" src="../components/icons/icons8-провереноj-100 8.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="/watchVideo" class="pagesLink">
+                            <div class="videoItem" id="4">
+                                <div>
+                                    <img class="pictureVideo" src="../components/videoImage/maxresdefault.png" alt="video">
+                                </div>
+                                <div>
+                                    <div class="videoData-block">
+                                        <div class="videoData-block">
+                                            <img class="iconSize15" src="../components/icons/icons8-огонь-1001.png" alt="redFire">
+                                            <p class="videoData">2.7 M views</p>
+                                        </div>
+                                        <p class="videoData">a month ago</p>
+                                    </div>
+                                    <p class="videoHeader">Phil Foden 2024 - Skills , Goals & Assists - HD</p>
+                                    <div class="goToChannel">
+                                        <h5 class="videoData">Football</h5>
+                                        <img class="iconSize15 confirmed" src="../components/icons/icons8-провереноj-100 8.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+        
+                <div class="exploreVideo">
+                    <div class="titleCategory">
+                        <img class="iconSize20" src="../components/icons/icons8-компас-100 (1) 1.png" alt="redFire">
+                        <h4 class="titleCategoryText">Explore</h4>
+                    </div>
+                    <div class="videoItems videoItemsEx" id="videoItemsEx"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="/script/utils.js"></script>
+    <script src="/script/menu.js"></script>
+    <script src="/script/explore.js"></script>
+</body>
+</html>
