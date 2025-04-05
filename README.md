@@ -43,7 +43,7 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/ваш-логин/youtube-clone.git
+git clone https://github.com/SharipovHuseyn/youtube-clone.git
 cd htube
 
 2. Install dependencies:
@@ -52,9 +52,17 @@ npm install
 ```
 
 3. Set up environment:
+  ./server/.env
 ```bash
-cp .env.example .env
-# Edit .env with your credentials
+SECRET_KEY_REGISTER = YOUR_REGISTER_KEY_RECAPTCHA
+SECRET_KEY_LOGIN = YOUR_LOGIN_KEY_RECAPTCHA
+PASSWORDGMAIL = YOUR_PASSWORD_GMAIL
+
+DB_HOST = localhost
+DB_USER = root
+DB_PASSWORD = root
+DB_DATABASE = htube
+DB_PORT = 8889
 ```
 
 4. Database setup:
