@@ -44,7 +44,7 @@
 1. Клонируйте репозиторий:
 ```bash
 git clone https://github.com/SharipovHuseyn/youtube-clone.git
-cd htube
+cd htube/server/
 
 2. Install dependencies:
 ```bash
