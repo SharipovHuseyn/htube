@@ -1,5 +1,5 @@
->Youtube clone | Full Stack project
 # 🎬 htube(YouTube Clone)
+>Youtube clone | Full Stack project
 
 **Полнофункциональный клон YouTube с системой видео, комментариев и подписок**
 
