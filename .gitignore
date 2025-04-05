@@ -1,9 +1,10 @@
 # Конфиденциальные данные
-./server/.env
-./client/.env
-./htube.sql
+/server/.env
+/client/.env
+htube.sql
 
 # Зависимости
-./node_modules/
+node_modules/
 
-./uploads/
+# Загруженные файлы
+uploads/
