@@ -1,7 +1,6 @@
 # Конфиденциальные данные
-./.env
-./.env.*
-./*.env
+./server/.env
+./client/.env
 ./htube.sql
 
 # Зависимости
