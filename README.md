@@ -2,7 +2,7 @@
 
 **Полнофункциональный клон YouTube с системой видео, комментариев и подписок**
 
-![Главная страница](screenshots/home.png)
+![Главная страница](./screenshots/home-page.png)
 
 ## ✨ Основные возможности
 
@@ -94,8 +94,6 @@ Visit `http://localhost:7070` in your browser.
 | `/history` | GET | Get watch history |
 
 ## Screenshots
-
-![Home Page](./screenshots/home-page.png)
 ![History Page](./screenshots/history-page.png)
 ![Studio Page](./screenshots/studio-page.png)
 ![Upload Video Page](./screenshots/upload-video-page.png)
